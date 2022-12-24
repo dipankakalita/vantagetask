@@ -12,8 +12,6 @@ export class HighlightNumbComponent {
   text:any = new FormControl('Steve is 26 years old but people think he is 76years. His DOB is 26 Jan 1997')
   searchedWordsControl:any = new FormControl('')
 
-  // searchedWords$: Observable<string[]> = this .searchedWordsControl .valueChanges .pipe( map((search: string) => search.trim().split(' ')) )
-  
   constructor(){
   }
 }
