@@ -1,0 +1,24 @@
+<div class="search-results"
+      infinite-scroll
+      [infiniteScrollDistance]="scrollDistance"
+      [infiniteScrollUpDistance]="scrollUpDistance"
+      [infiniteScrollThrottle]="throttle"
+      (scrolled)="onScrollDown()">
+
+  <div class="rows">
+    <div class="columns" *ngFor="let column of images">
+      <img [src]="img.download_url+'.webp'" *ngFor="let img of column.img" (click)="open(content,img)">
+    </div>
+  </div>
+
+</div>
+
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title" id="modal-basic-title">{{imgName}}</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body d-flex justify-content-center">
+		<img [src]="currImage" style="height: 80vh;">
+	</div>
+</ng-template>

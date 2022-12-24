@@ -1,0 +1,18 @@
+<div class="container">
+  <h3 class="text-center my-5">Attribute Directive</h3>
+    <b>Input Text: </b><br>
+    <textarea placeholder="Text" [formControl]="text" rows="5" style="width: 300px;"></textarea>
+
+    <br>
+    <br>
+
+    <!-- Searched words: <br>
+    <input type="text" placeholder="Searched words" [formControl]="searchedWordsControl"> -->
+    <b>Output Text:</b> <br>
+    <p highlightNumber [text]="text.value" classToApply="selected" ></p>
+
+  </div>
+
+  <!-- <h3>{{searchedWords$ | json}}</h3> -->
+
+  <!-- <h1 highlightNumber>My name is dipanka kalita</h1> -->

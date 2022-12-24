@@ -1,0 +1,41 @@
+.rows {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	.columns {
+		flex: 28%;
+		max-width: 28%;
+		img {
+			padding: 12px;
+			vertical-align: middle;
+			width: 100%;
+			cursor: zoom-in;
+			filter: brightness(100%);
+		}
+		img:hover {
+			filter: brightness(80%);
+			-webkit-transition: 0.1s;
+			-moz-transition: 0.1s;
+			-o-transition: 0.1s;
+			-ms-transition: 0.1s;
+			transition: 0.1s;
+		}
+	}
+  }
+  
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+	.columns {
+	  flex: 50%;
+	  max-width: 50%;
+	}
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+	.columns {
+	  flex: 100%;
+	  max-width: 100%;
+	}
+  }
